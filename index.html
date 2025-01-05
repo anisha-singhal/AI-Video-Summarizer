@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI YouTube Video Summarizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unlock the Key Insights of Any Video</h1>
+        <p class="intro-text">
+            This free AI-powered tool swiftly analyzes long videos and generates accurate, concise summaries, helping you get straight to the most important information. Whether you're researching, learning, or just looking to digest content faster, our tool saves you hours of watching. Embrace the power of advanced AI to streamline your video consumption and get the essential takeaways, all in a fraction of the time.
+        </p>
+
+        <form id="uploadForm">
+            <label for="audioFile">Upload Audio or Video File:</label>
+            <input type="file" id="audioFile" accept="audio/*, video/*" required>
+
+            <label for="language">Select Language:</label>
+            <select id="language" required>
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="it">Italian</option>
+                <option value="pt">Portuguese</option>
+                <option value="ru">Russian</option>
+                <option value="ja">Japanese</option>
+                <option value="ko">Korean</option>
+                <option value="zh">Chinese</option>
+            </select>
+
+            <button type="submit">Summarize</button>
+        </form>
+
+        <!-- Progress Container (initially hidden) -->
+        <div id="progressContainer" class="progress-container" style="display:none;">
+            <div class="progress-bar" id="progressBar"></div>
+            <p id="loadingText" class="loading-text">Processing... Please wait</p>
+        </div>
+
+        <!-- Summary Section (initially hidden) -->
+        <div id="summaryContainer" class="output-container" style="display:none;">
+            <h2>Summary:</h2>
+            <p id="summaryText"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 AI YouTube Video Summarizer. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
